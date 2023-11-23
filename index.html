@@ -17,6 +17,8 @@
         <button id = "rock">Rock</button>
         <button id = "paper">Paper</button>
         <button id = "scissors">Scissors</button>
+        <button id = "lizard">Lizard</button>
+        <button id = "Spock">Spock</button>
     </div>
     <br />
     <!-- Info -->
@@ -29,13 +31,15 @@
         const rockBtn = document.getElementById("rock");
         const paperBtn = document.getElementById("paper");
         const scissorsBtn = document.getElementById("scissors");
+        const lizardBtn = document.getElementById("lizard");
+        const spockBtn = document.getElementById("Spock")
         //Get the spans
         const userOptionSpan = document.getElementById("user option");
         const computerOptionSpan = document.getElementById("computer option");
         const resultSpan = document.getElementById("result");
 
         //Define the computer options
-        const options = ["Rock", "Paper", "Scissors"];
+        const options = ["Rock", "Paper", "Scissors","Lizard", "Spock"];
         
         // Add click events to the buttons
         rockBtn.addEventListener("click", function() {
@@ -50,6 +54,14 @@
         scissorsBtn.addEventListener("click", function() {
             //userOptionSpan.innerHTML = options[2];
             playGame(options[2]);
+        });
+
+        lizardBtn.addEventListener("click", function(){
+            playGame(options[3]);
+        });
+
+        spockBtn.addEventListener("click", function(){
+            playGame(options[4]);
         });
 
         //Play the game function
@@ -72,21 +84,56 @@
 
         //Rock vs scissors
         else if (userOption === "Rock" && computerOption === "Scissors"){
-            resultSpan.innerHTML = "You win!";
+            resultSpan.innerHTML = "Rock crushes Scissors, You win!";
         }
 
+        // Rock vs lizard
+        else if (userOption === "Rock" && computerOption === "Lizard"){
+            resultSpan.innerHTML = "Rock crushes Lizard, You win!";
+        }
+
+        //Lizard vs Spock
+        else if (userOption === "Lizard" && computerOption === "Spock"){
+            resultSpan.innerHTML = "Lizard poisons Spock, You win!";
+        }
+
+        //Spock vs scissors
+        else if (userOption === "Spock" && computerOption === "Scissors"){
+            resultSpan.innerHTML = "Spock smashes Scissors, You win!";
+        }
+
+        //Scissors vs Lizard
+        else if (userOption === "Scissors" && computerOption === "Lizard"){
+            resultSpan.innerHTML = "Scissors decapitates Lizard, You win!";
+        }
+
+        //Lizard vs Paper
+        else if (userOption === "Lizard" && computerOption === "Paper"){
+            resultSpan.innerHTML = "Lizard eats Paper, You win!";
+        }
+
+        //Paper vs Spock
+        else if (userOption === "Paper" && computerOption === "Spock"){
+            resultSpan.innerHTML = "Paper disproves Spock, You win!";
+        }
+
+        //Spock vs Rock
+        else if (userOption === "Spock" && computerOption === "Rock"){
+            resultSpan.innerHTML = "Spock vaporizes Rock, You win!";
+        }
         //Paper vs Rock
         else if (userOption === "Paper" && computerOption === "Rock"){
-            resultSpan.innerHTML = "You win!";
+            resultSpan.innerHTML = "Paper covers Rock, You win!";
         }
 
         //Scissors vs paper
         else if (userOption === "Scissors" && computerOption === "Paper"){
-            resultSpan.innerHTML = "You win!";
+            resultSpan.innerHTML = "Scissors cuts Paper, You win!";
         }
+
         // all other results
         else {
-            resultSpan.innerHTML = "You lose :(";
+            resultSpan.innerHTML = "Oh no, You lose :(";
         }
     }
     </script>
