@@ -61,8 +61,8 @@
             //Set the user option
             userOptionSpan.innerHTML = userOption;
 
-        //Set the computer option
-        computerOptionSpan.innerHTML = computerOption;
+            //Set the computer option
+            computerOptionSpan.innerHTML = computerOption;
         
         //Compare the options
         //A draw
@@ -74,15 +74,17 @@
         else if (userOption === "Rock" && computerOption === "Scissors"){
             resultSpan.innerHTML = "You win!";
         }
+
         //Paper vs Rock
         else if (userOption === "Paper" && computerOption === "Rock"){
             resultSpan.innerHTML = "You win!";
         }
+
         //Scissors vs paper
         else if (userOption === "Scissors" && computerOption === "Paper"){
             resultSpan.innerHTML = "You win!";
         }
-
+        // all other results
         else {
             resultSpan.innerHTML = "You lose :(";
         }
