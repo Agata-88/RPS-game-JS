@@ -1,4 +1,6 @@
-# RPS-game-JS
+# RPSLS-game-JS
+
+Rock paper scissors game with a twist from 'The Big Bang Theory".
 
 JS game utilising variables, functions and arrays.
 Game lets user choose either rock, paper or scissors and randomly generates one of this choices at the same time. 
