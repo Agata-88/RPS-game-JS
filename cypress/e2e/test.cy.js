@@ -61,7 +61,7 @@ describe('template spec', () => {
 })
   // Plays the game with the "Scissors" option and checks the result
   it('Plays the game with the "Scissors" option and checks the result', () => {
-    //Get the "Paper" button that should exist and click on it
+    //Get the "Scissors" button that should exist and click on it
     cy.get('[data-cy="scissors"]').should("exist").click();
 
     //Check that the user option is set to "Scissors" 
@@ -89,7 +89,7 @@ describe('template spec', () => {
   })
   // Plays the game with the "Lizard" option and checks the result
   it('Plays the game with the "Lizard" option and checks the result', () => {
-    //Get the "Paper" button that should exist and click on it
+    //Get the "Lizard" button that should exist and click on it
     cy.get('[data-cy="lizard"]').should("exist").click();
 
     //Check that the user option is set to "Lizard" 
